@@ -7,6 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { QuestionComponent } from './question/question.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     WelcomeComponent,
     QuestionComponent,
     HeaderComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,

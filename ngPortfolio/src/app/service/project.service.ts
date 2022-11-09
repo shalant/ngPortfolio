@@ -4,11 +4,11 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class QuestionService {
+export class ProjectService {
 
   constructor(private http: HttpClient) { }
 
-  getQuestionJson() {
-    return this.http.get<any>("assets/questions.json");
+  getProjectJson() {
+    return this.http.get<any>("assets/projects.json");
   }
 }
