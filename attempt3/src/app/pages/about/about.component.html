@@ -12,6 +12,12 @@
     <table mat-table [dataSource]="dataSource" matSort>
   
       <!-- ID Column -->
+      <ng-container matColumnDef="techs">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Techs </th>
+        <td mat-cell *matCellDef="let row"> {{row.techs}} </td>
+      </ng-container>
+
+      <!-- experimental column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
         <td mat-cell *matCellDef="let row"> {{row.id}} </td>

@@ -10,16 +10,14 @@ export interface UserData {
   name: string;
   progress: string;
   fruit: string;
+  techs: object;
+  // item: string;
+  // type: string;
+  // icon: string;
 }
 
 /** Constants used to fill up our data base. */
 const FRUITS: string[] = [
-  'blueberry',
-  'lychee',
-  'kiwi',
-  'mango',
-  'peach',
-  'lime',
   'pomegranate',
   'pineapple',
 ];
@@ -39,12 +37,31 @@ const NAMES: string[] = [
   'MYSQL',
   'MongoDB',
   'Node',
-  'Arthur',
-  'Mia',
-  'Thomas',
-  'Elizabeth',
 ];
-const TECHNOLOGIES: any[] = [
+
+// interface sample_arr {
+//   data1: <data type>;
+//   data2: <data type>;
+//   }
+//   const array_emp: sample_arr[ ] = [
+//   { data1: “value1”, data2: “value2”, data3: “value3” },
+//   { data1: “value12”, data2: “value22”, data3: “value32” },
+//   ]
+
+// export interface TECHS {
+//   item: <string>;
+//   type: <string>;
+//   icon: <string>;
+// }
+
+
+const BLAH: { name: string; age: number }[] = [
+  { name: 'Alice', age: 27 },
+  { name: 'Bob', age: 28 },
+  { name: 'Carl', age: 29 },
+];
+
+const TECHNOLOGIES: { item: string; type: string; icon: string} [] = [
   {item: 'Angular', type: 'Framework', icon: 'fa-brands fa-angular'},
   {item: 'React', type: 'Framework', icon: 'fa-brands fa-react'},
   {item: 'Azure-204 Developer Associate', type: 'Cloud Certification', icon: 'fa-brands fa-react'},
@@ -68,14 +85,7 @@ const TECHNOLOGIES: any[] = [
   {item: 'Node', type: 'Server-side', icon: 'fa-brands fa-node'},
   {item: 'Azure-900', type: 'Certification', icon: 'fa-brands fa-react'},
   {item: 'Azure-900', type: 'Certification', icon: 'fa-brands fa-react'},
-  {item: 'Azure-900', type: 'Certification', icon: 'fa-brands fa-react'},
-  
-  'ASP.NET',
-  'C#',
-  'Arthur',
-  'Mia',
-  'Thomas',
-  'Elizabeth',
+  {item: 'Azure-900', type: 'Certification', icon: 'fa-brands fa-react'}
 ];
 
 @Component({
@@ -126,5 +136,6 @@ function createNewUser(id: number): UserData {
     name: name,
     progress: Math.round(Math.random() * 100).toString(),
     fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
+    techs: TECHNOLOGIES,
   };
 }
