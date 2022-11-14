@@ -42,6 +42,7 @@ const PROJECT_DATA: Technology[] = [
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
+
 export class AboutComponent {
   title = 'MT';
   displayedColumns: string[] = ['position', 'name', 'category', 'icon'];
@@ -53,14 +54,15 @@ export class AboutComponent {
 
   @ViewChild(MatPaginator) paginator !: MatPaginator;
 
-// MatPaginator Output
-pageEvent: PageEvent | undefined;
+  // MatPaginator Output
+  pageEvent: PageEvent | undefined;
 
   setPageSizeOptions(setPageSizeOptionsInput: string) {
     if (setPageSizeOptionsInput) {
       this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
     }
   }
+
 }
 
 
