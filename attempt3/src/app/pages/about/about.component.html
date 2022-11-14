@@ -8,6 +8,11 @@
 <p><a href="https://github.com/shalant">Github: https://github.com/shalant</a></p>
 <br>
 
+<mat-form-field appearance="standard">
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+</mat-form-field>
+
 <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)" class="mat-elevation-z8">
 
   <!--- Note that these columns can be defined in any order.
@@ -40,6 +45,11 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+<!-- Row shown when there is no matching data. -->
+<tr class="mat-row" *matNoDataRow>
+  <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+</tr>
 
 <mat-paginator [pageSizeOptions]="[5, 10, 20]"
 showFirstLastButtons 

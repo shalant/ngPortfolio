@@ -6,10 +6,6 @@ th {
   font-weight: bold;
   font-size: larger;
 }
-
-.mat-form-field {
-  margin-right: 12px;
-}
   
 .mat-row:nth-child(even){
   background-color: rgb(250, 250, 250);
@@ -17,4 +13,11 @@ th {
         
 .mat-row:nth-child(odd){
   background-color: rgb(240, 240, 240);
+}
+
+
+.mat-form-field {
+  margin-right: 12px;
+  font-size: 14px;
+  width: 100%;
 }
