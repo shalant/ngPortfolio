@@ -8,32 +8,32 @@
 <p><a href="https://github.com/shalant">Github: https://github.com/shalant</a></p>
 <br>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)" class="mat-elevation-z8">
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Position Column -->
   <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number"> No. </th>
     <td mat-cell *matCellDef="let tech"> {{tech.position}} </td>
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Technology </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by tech"> Technology </th>
     <td mat-cell *matCellDef="let tech"> {{tech.name}} </td>
   </ng-container>
 
   <!-- Weight Column -->
   <ng-container matColumnDef="category">
-    <th mat-header-cell *matHeaderCellDef> Category </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by category"> Category </th>
     <td mat-cell *matCellDef="let tech"> {{tech.category}} </td>
   </ng-container>
 
   <!-- Symbol Column -->
   <ng-container matColumnDef="icon">
-    <th mat-header-cell *matHeaderCellDef> Icon </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by icon"> Icon </th>
     <td mat-cell *matCellDef="let tech"><i class='{{tech.icon}}'></i> </td>
   </ng-container>
 
