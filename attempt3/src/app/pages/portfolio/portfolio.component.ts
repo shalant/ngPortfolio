@@ -12,36 +12,37 @@ export class PortfolioComponent {
   
   projectList = [
     {
-      name: 'Nishant',
-      age: 25
+      name: 'ATA Airlines',
+      technologies: 'ASP.NET Web API, Angular, Azure',
+      image: '../../../assets/ATA.png'
     },
     {
-      name: 'Shailesh',
-      age: 45
+      name: 'Tiger Phone',
+      technologies: 'ASP.NET Web API, Angular, Azure',
     },
     {
-      name: 'Abhishek',
-      age: 36
+      name: 'Doug Rosenberg Music',
+      technologies: 36
     },
     {
-      name: 'Akshay',
-      age: 65
+      name: 'AWS Resilient Fault Tolerant Wordpress',
+      technologies: 65
     },
     {
-      name: 'Ashish',
-      age: 12
+      name: 'Dynamic Wines',
+      technologies: 12
     },
     {
       name: 'Uday',
-      age: 31
+      technologies: 31
     },
     {
       name: 'Mayank',
-      age: 45
+      technologies: 45
     },
     {
       name: 'Raju',
-      age: 74
+      technologies: 74
     },
   ]
 

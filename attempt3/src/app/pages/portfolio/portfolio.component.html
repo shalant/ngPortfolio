@@ -1,29 +1,29 @@
 <ul>
+
     <li *ngFor="let item of projectList">
-      {{ item.name }} is {{ item.age }} years old
+      <!-- {{ item.name }} is {{ item.age }} years old -->
       
-      <mat-card class="example-card">
+      <mat-card class="example-card grid">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>{{ item.name }}</mat-card-title>
-          <mat-card-subtitle>{{ item.age }}</mat-card-subtitle>
+          <mat-card-subtitle>{{ item.technologies }}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <img mat-card-image src='url{{ item.image }}' alt="Photo of a Shiba Inu">
         <mat-card-content>
           <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
+            This is a full-stack Airline application, with an Angular front end, ASP.NET back end, and configured to use a MS SQL Server DB. The admin can add Passenger, Flights, and create a booking
           </p>
         </mat-card-content>
+        <!-- ADD GH ICON, MAYBE A URL? -->
         <mat-card-actions>
-          <button mat-button>LIKE</button>
+          <button mat-icon><i class="fa-brands fa-github fa-2x"></i></button>
           <button mat-button>SHARE</button>
         </mat-card-actions>
       </mat-card>
       
-
     </li>
+
   </ul>
 
   <!-- <mat-card class="example-card">
