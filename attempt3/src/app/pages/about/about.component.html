@@ -1,3 +1,13 @@
+<div class="container">
+
+<h1>Doug Rosenberg Dev</h1>
+<h2>Bio</h2>
+<p>Full-stack .NET/Angular developer with DevOps background. Passionate about .NET/C#, Cloud Computing (both Azure/AWS), Angular/React, and working with a good team. Independent learner that enjoys pithy challenges. Lots of experience working with a variety of clients in coordinating details and managing logistics. Looking forward to my new career creating value for a company. My Github repo is filled with more than 200 projects, and that is my strongest suit.</p>
+<address>Contact: <a href="mailto:doug.rosenberg.com"></a> doug.rosenberg@gmail.com</address>
+<br>
+<p><a href="https://github.com/shalant">Github: https://github.com/shalant</a></p>
+<br>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
   <!--- Note that these columns can be defined in any order.
@@ -6,28 +16,43 @@
   <!-- Position Column -->
   <ng-container matColumnDef="position">
     <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    <td mat-cell *matCellDef="let tech"> {{tech.position}} </td>
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef> Technology </th>
-    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    <td mat-cell *matCellDef="let tech"> {{tech.name}} </td>
   </ng-container>
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="weight">
+  <ng-container matColumnDef="category">
     <th mat-header-cell *matHeaderCellDef> Category </th>
-    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    <td mat-cell *matCellDef="let tech"> {{tech.category}} </td>
   </ng-container>
 
   <!-- Symbol Column -->
-  <ng-container matColumnDef="symbol">
+  <ng-container matColumnDef="icon">
     <th mat-header-cell *matHeaderCellDef> Icon </th>
-    <td mat-cell *matCellDef="let element"><i class='{{element.symbol}}'></i> </td>
+    <td mat-cell *matCellDef="let tech"><i class='{{tech.icon}}'></i> </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
 
+<mat-paginator [length]="length"
+               [pageSize]="pageSize"
+               [pageSizeOptions]="pageSizeOptions"
+               (page)="pageEvent = $event"
+               aria-label="Select page">
+</mat-paginator>
+
+<div *ngIf="pageEvent">
+  <h5>Page Change Event Properties</h5>
+  <div>List length: {{pageEvent.length}}</div>
+  <div>Page size: {{pageEvent.pageSize}}</div>
+  <div>Page index: {{pageEvent.pageIndex}}</div>
+</div>
+
+</div>

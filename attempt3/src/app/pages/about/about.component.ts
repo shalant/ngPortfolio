@@ -1,29 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import {PageEvent} from '@angular/material/paginator';
 
-export interface PeriodicElement {
+
+export interface Technology {
   name: string;
   position: number;
-  weight: string;
-  symbol: string;
+  category: string;
+  icon: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Angular', weight: 'framework', symbol: 'fa-brands fa-angular fa-2x'},
-  {position: 2, name: 'React', weight: 'library', symbol: 'fa-brands fa-react fa-2x'},
-  {position: 3, name: 'Azure-204 Developer', weight: 'Cloud Certification', symbol: 'fa-brands fa-microsoft fa-2x'},
-  {position: 4, name: 'Azure-900', weight: 'Cloud Certification', symbol: 'fa-brands fa-microsoft fa-2x'},
-  {position: 5, name: 'AWS Certified Developer', weight: 'Cloud Certification', symbol: 'fa-brands fa-aws fa-2x'},
-  {position: 6, name: 'AWS Solutions Architect Associate', weight: 'Cloud Certification', symbol: 'fa-brands fa-aws fa-2x'},
-  {position: 7, name: 'AWS Certied Cloud Practitioner', weight: 'Cloud Certification', symbol: 'fa-brands fa-aws fa-2x'},
-  {position: 8, name: 'MS SQL Server', weight: 'Database', symbol: 'fa-brands fa-microsoft fa-2x'},
-  {position: 8, name: 'MY SQL', weight: 'Database', symbol: 'fa-solid fa-database fa-2x'},
-  {position: 8, name: 'Mongo DB', weight: 'Database', symbol: 'fa-solid fa-database fa-2x'},
-  {position: 8, name: 'Material UI', weight: 'CSS', symbol: 'fa-brands fa-css3-alt fa-2x'},
-  {position: 8, name: 'Bootstrap', weight: 'CSS', symbol: 'fa-brands fa-css3-alt fa-2x'},
-  {position: 8, name: 'Material UI', weight: 'CSS', symbol: 'fa-brands fa-css3-alt fa-2x'},
-  {position: 8, name: 'Material UI', weight: 'CSS', symbol: 'fa-brands fa-css3-alt fa-2x'},
-  {position: 9, name: 'Docker', weight: 'DevOps', symbol: 'fa-brands fa-docker fa-2x'},
-  {position: 10, name: 'Neon', weight: 'DevOps', symbol: 'fa-brands fa-jenkins fa-2x'},
+const PROJECT_DATA: Technology[] = [
+  {position: 1, name: 'Angular', category: 'Framework', icon: 'fa-brands fa-angular fa-2x'},
+  {position: 2, name: 'React', category: 'Library', icon: 'fa-brands fa-react fa-2x'},
+  {position: 2, name: 'Javascript', category: 'Language', icon: 'fa-brands fa-js fa-2x'},
+  {position: 2, name: 'C#', category: 'Language', icon: 'fa-brands fa-microsoft fa-2x'},
+  {position: 2, name: 'Python', category: 'Language', icon: 'fa-brands fa-python fa-2x'},
+  {position: 2, name: 'Java', category: 'Language', icon: 'fa-brands fa-java fa-2x'},
+  {position: 2, name: 'Linux', category: 'Language', icon: 'fa-brands fa-linux fa-2x'},
+  {position: 2, name: 'Ubuntu', category: 'Language', icon: 'fa-brands fa-ubuntu fa-2x'},
+  {position: 2, name: 'Github', category: 'Source Control', icon: 'fa-brands fa-github fa-2x'},
+  {position: 3, name: 'Azure-204 Developer', category: 'Cloud Certification', icon: 'fa-brands fa-microsoft fa-2x'},
+  {position: 4, name: 'Azure-900', category: 'Cloud Certification', icon: 'fa-brands fa-microsoft fa-2x'},
+  {position: 5, name: 'AWS Certified Developer', category: 'Cloud Certification', icon: 'fa-brands fa-aws fa-2x'},
+  {position: 6, name: 'AWS Solutions Architect Associate', category: 'Cloud Certification', icon: 'fa-brands fa-aws fa-2x'},
+  {position: 7, name: 'AWS Certied Cloud Practitioner', category: 'Cloud Certification', icon: 'fa-brands fa-aws fa-2x'},
+  {position: 8, name: 'MS SQL Server', category: 'Database', icon: 'fa-brands fa-microsoft fa-2x'},
+  {position: 8, name: 'MY SQL', category: 'Database', icon: 'fa-solid fa-database fa-2x'},
+  {position: 8, name: 'Mongo DB', category: 'Database', icon: 'fa-solid fa-database fa-2x'},
+  {position: 8, name: 'Material UI', category: 'CSS', icon: 'fa-brands fa-css3-alt fa-2x'},
+  {position: 8, name: 'Bootstrap', category: 'CSS', icon: 'fa-brands fa-css3-alt fa-2x'},
+  {position: 8, name: 'Prime NG', category: 'CSS', icon: 'fa-brands fa-css3-alt fa-2x'},
+  {position: 8, name: 'Styled Components', category: 'CSS', icon: 'fa-brands fa-css3-alt fa-2x'},
+  {position: 9, name: 'Docker', category: 'DevOps', icon: 'fa-brands fa-docker fa-2x'},
+  {position: 10, name: 'Jenkins', category: 'DevOps', icon: 'fa-brands fa-jenkins fa-2x'},
 ];
 
 @Component({
@@ -33,8 +44,23 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class AboutComponent {
   title = 'MT';
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['position', 'name', 'category', 'icon'];
+  dataSource = PROJECT_DATA;
+  length = 100;
+  pageSize = 10;
+  pageSizeOptions: number[] = [5, 10, 25, 100];
+
+
+  @ViewChild(MatPaginator) paginator !: MatPaginator;
+
+// MatPaginator Output
+pageEvent: PageEvent | undefined;
+
+  setPageSizeOptions(setPageSizeOptionsInput: string) {
+    if (setPageSizeOptionsInput) {
+      this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
+    }
+  }
 }
 
 
