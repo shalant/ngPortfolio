@@ -1,23 +1,44 @@
+body {
+  margin: 0;
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+
+}
+
 .mat-toolbar{
-    background-color: cornflowerblue;
+    background-color: rgb(90, 200, 177);
     color: white;
   }
-  .mat-button{
+
+.mat-button{
      color: white;
   }
-  .spacer{
-    flex: 1 1 auto;
-  }
 
-  .nav {
-    position: sticky;
+/* .spacer{
+    flex: 1 1 auto;
+  } */
+
+.nav {
+    /* position: sticky; */
     top: 0;
     width: 100%;
     background-color: #3f51b5;
     color: #fff;
     display: flex;
-    padding: 0 16px;
+    /* padding: 0 16px; */
     align-items: center;
     height: 56px;
     font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+  }
+
+  a {
+    padding: 0 2rem;
+    opacity:0.5;
+    
+  }
+
+  a:hover {
+      opacity:1;
+      font-weight:bolder;
+      transform: skew(-10deg);
+      transition-duration: 500ms;
   }

@@ -16,6 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { MatInputModule } from '@angular/material/input';
     HomeComponent,
     AboutComponent,
     ContactComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
