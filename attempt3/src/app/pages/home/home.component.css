@@ -2,10 +2,12 @@
     background-color: cornflowerblue;
     color: white;
   }
+
   .mat-button{
      color: white;
   }
-  .spacer{
+
+.spacer{
     flex: 1 1 auto;
   }
 

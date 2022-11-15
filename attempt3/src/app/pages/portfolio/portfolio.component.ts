@@ -14,35 +14,51 @@ export class PortfolioComponent {
     {
       name: 'ATA Airlines',
       technologies: 'ASP.NET Web API, Angular, Azure',
-      image: '../../../assets/ATA.png'
+      image: '../../../assets/projectScreenshots/ATA.png',
+      github: 'https://github.com/shalant/AirlineTravelApp'
     },
     {
       name: 'Tiger Phone',
       technologies: 'ASP.NET Web API, Angular, Azure',
+      image: '../../../assets/projectScreenshots/ATA.png',
+      github: 'https://github.com/shalant/AirlineTravelApp'
     },
     {
       name: 'Doug Rosenberg Music',
-      technologies: 36
+      technologies: '36',
+      image: '../../../assets/projectScreenshots/ATA.png',
+      github: 'https://github.com/shalant/AirlineTravelApp'
     },
     {
       name: 'AWS Resilient Fault Tolerant Wordpress',
-      technologies: 65
+      technologies: '36',
+      image: '../../../assets/projectScreenshots/ATA.png',
+      github: 'https://github.com/shalant/AirlineTravelApp'
     },
     {
       name: 'Dynamic Wines',
-      technologies: 12
+      technologies: '36',
+      image: '../../../assets/projectScreenshots/ATA.png',
+      github: 'https://github.com/shalant/AirlineTravelApp'
+
     },
     {
       name: 'Uday',
-      technologies: 31
+      technologies: '36',
+      image: '../../../assets/projectScreenshots/ATA.png',
+      github: 'https://github.com/shalant/AirlineTravelApp'
     },
     {
       name: 'Mayank',
-      technologies: 45
+      technologies: '36',
+      image: '../../../assets/projectScreenshots/ATA.png',
+      github: 'https://github.com/shalant/AirlineTravelApp'
     },
     {
       name: 'Raju',
-      technologies: 74
+      technologies: '36',
+      image: '../../../assets/projectScreenshots/ATA.png',
+      github: 'https://github.com/shalant/AirlineTravelApp'
     },
   ]
 
