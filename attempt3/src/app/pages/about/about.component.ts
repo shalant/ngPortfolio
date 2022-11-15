@@ -19,6 +19,9 @@ export interface Technology {
 const PROJECT_DATA: Technology[] = [
   {position: 1, name: 'Angular', category: 'Framework', icon: 'fa-brands fa-angular fa-2x'},
   {position: 1, name: 'ASP.NET', category: 'Framework', icon: 'fa-brands fa-microsoft fa-2x'},
+  {position: 3, name: 'Azure-204 Developer', category: 'Cloud Certification', icon: 'fa-brands fa-microsoft fa-2x'},
+  {position: 5, name: 'AWS Certified Developer', category: 'Cloud Certification', icon: 'fa-brands fa-aws fa-2x'},
+  {position: 9, name: 'Docker', category: 'DevOps', icon: 'fa-brands fa-docker fa-2x'},
   {position: 2, name: 'React', category: 'Library', icon: 'fa-brands fa-react fa-2x'},
   {position: 2, name: 'Javascript', category: 'Language', icon: 'fa-brands fa-js fa-2x'},
   {position: 2, name: 'C#', category: 'Language', icon: 'fa-brands fa-microsoft fa-2x'},
@@ -27,9 +30,7 @@ const PROJECT_DATA: Technology[] = [
   {position: 2, name: 'Linux', category: 'Language', icon: 'fa-brands fa-linux fa-2x'},
   {position: 2, name: 'Ubuntu', category: 'Language', icon: 'fa-brands fa-ubuntu fa-2x'},
   {position: 2, name: 'Github', category: 'Source Control', icon: 'fa-brands fa-github fa-2x'},
-  {position: 3, name: 'Azure-204 Developer', category: 'Cloud Certification', icon: 'fa-brands fa-microsoft fa-2x'},
   {position: 4, name: 'Azure-900', category: 'Cloud Certification', icon: 'fa-brands fa-microsoft fa-2x'},
-  {position: 5, name: 'AWS Certified Developer', category: 'Cloud Certification', icon: 'fa-brands fa-aws fa-2x'},
   {position: 6, name: 'AWS Solutions Architect Associate', category: 'Cloud Certification', icon: 'fa-brands fa-aws fa-2x'},
   {position: 7, name: 'AWS Certied Cloud Practitioner', category: 'Cloud Certification', icon: 'fa-brands fa-aws fa-2x'},
   {position: 8, name: 'MS SQL Server', category: 'Database', icon: 'fa-brands fa-microsoft fa-2x'},
@@ -39,13 +40,15 @@ const PROJECT_DATA: Technology[] = [
   {position: 8, name: 'Bootstrap', category: 'CSS', icon: 'fa-brands fa-css3-alt fa-2x'},
   {position: 8, name: 'Prime NG', category: 'CSS', icon: 'fa-brands fa-css3-alt fa-2x'},
   {position: 8, name: 'Styled Components', category: 'CSS', icon: 'fa-brands fa-css3-alt fa-2x'},
-  {position: 9, name: 'Docker', category: 'DevOps', icon: 'fa-brands fa-docker fa-2x'},
   {position: 10, name: 'Jenkins', category: 'DevOps', icon: 'fa-brands fa-jenkins fa-2x'},
   {position: 10, name: 'Terraform', category: 'DevOps', icon: 'fa-solid fa-cloud fa-2x'},
   {position: 10, name: 'Kubernetes', category: 'DevOps', icon: 'fa-solid fa-cloud fa-2x'},
   {position: 10, name: 'Razor Pages', category: 'Framework', icon: 'fa-brands fa-microsoft fa-2x'},
   {position: 10, name: 'Blazor Web Assembly', category: 'Framework', icon: 'fa-brands fa-microsoft fa-2x'},
   {position: 10, name: 'ASP.NET MVC', category: 'Framework', icon: 'fa-brands fa-microsoft fa-2x'},
+  {position: 10, name: 'JWT', category: 'Security', icon: 'fa-sharp fa-solid fa-lock fa-2x'},
+  {position: 10, name: 'Okta', category: 'Security', icon: 'fa-sharp fa-solid fa-lock fa-2x'},
+  {position: 10, name: 'Auth0', category: 'Security', icon: 'fa-sharp fa-solid fa-lock fa-2x'},
 ];
 
 @Component({
